@@ -1,0 +1,133 @@
+QMainWindow,
+QDialog {
+    background-color: #f4f7fb;
+}
+
+#centralWidget {
+    background-color: #f4f7fb;
+}
+
+#pageTitle {
+    color: #17243b;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+#pageSubtitle {
+    color: #718096;
+    font-size: 14px;
+    margin-top: -14px;
+}
+
+#controlsCard,
+#tableCard {
+    background-color: #ffffff;
+    border: 1px solid #e4eaf2;
+    border-radius: 12px;
+}
+
+#fileLabel {
+    color: #718096;
+    font-size: 13px;
+}
+
+#fieldLabel {
+    color: #34445c;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+QPushButton {
+    min-height: 38px;
+    padding: 0 16px;
+    border: none;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+#primaryButton {
+    color: #ffffff;
+    background-color: #3b72d9;
+}
+
+#primaryButton:hover {
+    background-color: #2f62c2;
+}
+
+#secondaryButton {
+    color: #ffffff;
+    background-color: #263b5a;
+}
+
+#secondaryButton:hover {
+    background-color: #1d2e49;
+}
+
+#textButton {
+    color: #52647e;
+    background-color: transparent;
+}
+
+#textButton:hover {
+    color: #2f62c2;
+    background-color: #eef4ff;
+}
+
+#bonusInput {
+    min-height: 36px;
+    padding: 0 8px;
+    color: #263b5a;
+    background-color: #ffffff;
+    border: 1px solid #d8e0eb;
+    border-radius: 7px;
+    font-size: 13px;
+}
+
+#bonusInput:focus {
+    border: 1px solid #3b72d9;
+}
+
+#gradesTable {
+    color: #34445c;
+    background-color: #ffffff;
+    alternate-background-color: #f7f9fc;
+    border: none;
+    gridline-color: #edf1f6;
+    selection-background-color: #e8f0ff;
+    selection-color: #17243b;
+    font-size: 13px;
+}
+
+#gradesTable::item {
+    padding: 7px;
+    border-bottom: 1px solid #edf1f6;
+}
+
+#gradesTable QHeaderView::section {
+    color: #65758d;
+    background-color: #f7f9fc;
+    border: none;
+    border-bottom: 1px solid #e4eaf2;
+    padding: 10px 8px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+#aboutDetails {
+    color: #34445c;
+    font-size: 14px;
+}
+
+#aboutDetails a {
+    color: #3b72d9;
+}
+
+QDialogButtonBox QPushButton {
+    color: #ffffff;
+    background-color: #263b5a;
+}
+
+QDialogButtonBox QPushButton:hover {
+    background-color: #1d2e49;
+}
