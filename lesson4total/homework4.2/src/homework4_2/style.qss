@@ -1,0 +1,86 @@
+QMainWindow {
+    background-color: #f4f7fb;
+}
+
+QWidget {
+    color: #172033;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 14px;
+}
+
+QLabel#heading {
+    color: #111827;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+QLabel#subtitle {
+    color: #667085;
+    font-size: 15px;
+}
+
+QPushButton {
+    min-height: 42px;
+    padding: 0 20px;
+    border: 0;
+    border-radius: 9px;
+    font-weight: 600;
+}
+
+QPushButton#primaryButton {
+    color: #ffffff;
+    background-color: #4f46e5;
+}
+
+QPushButton#primaryButton:hover {
+    background-color: #4338ca;
+}
+
+QPushButton#primaryButton:pressed {
+    background-color: #3730a3;
+}
+
+QPushButton#secondaryButton {
+    color: #344054;
+    background-color: #e9edf5;
+}
+
+QPushButton#secondaryButton:hover {
+    background-color: #dde3ee;
+}
+
+QLabel#fileLabel {
+    color: #667085;
+    font-size: 13px;
+}
+
+QWidget#chartPanel {
+    background-color: #ffffff;
+    border: 1px solid #e4e9f1;
+    border-radius: 14px;
+}
+
+QLabel#panelHeading {
+    color: #344054;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+QWidget#plotCanvas {
+    background-color: #ffffff;
+    border: 0;
+}
+
+QDialog {
+    background-color: #ffffff;
+}
+
+QLabel#aboutHeading {
+    color: #111827;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+QLabel {
+    padding: 2px 0;
+}

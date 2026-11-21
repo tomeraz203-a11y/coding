@@ -1,12 +1,9 @@
 import sys
 from pathlib import Path
 
-from PySide6.QtCore import Qt, QUrl
-from PySide6.QtGui import QDesktopServices
+from PySide6.QtCore import Qt
 from PySide6.QtWidgets import (
     QApplication,
-    QDialog,
-    QDialogButtonBox,
     QFileDialog,
     QFrame,
     QHeaderView,
@@ -21,10 +18,7 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-
-STUDENT_NAME = "Tomer Raz"
-STUDENT_EMAIL = "Tomeraz203@gmail.com"
-REPOSITORY_URL = "https://github.com/tomeraz203-a11y/coding.git"
+from About1 import Aboutwindow
 
 
 class GradeCorrectionWindow(QMainWindow):
@@ -188,30 +182,8 @@ class GradeCorrectionWindow(QMainWindow):
                 self.table.setItem(row, column, QTableWidgetItem(value))
 
     def show_about(self) -> None:
-        dialog = QDialog(self)
-        dialog.setWindowTitle("About")
-        dialog.setMinimumWidth(380)
-        layout = QVBoxLayout(dialog)
-        layout.setContentsMargins(24, 22, 24, 18)
-        layout.setSpacing(16)
-
-        details = QLabel(
-            f"<h3>Grade Correction Tool</h3>"
-            f"<p><b>{STUDENT_NAME}</b><br>{STUDENT_EMAIL}</p>"
-            f'<p><a href="{REPOSITORY_URL}">GitHub repository</a></p>'
-        )
-        details.setObjectName("aboutDetails")
-        details.setOpenExternalLinks(False)
-        details.linkActivated.connect(
-            lambda link: QDesktopServices.openUrl(QUrl(link))
-        )
-        layout.addWidget(details)
-
-        buttons = QDialogButtonBox(QDialogButtonBox.StandardButton.Close)
-        buttons.rejected.connect(dialog.reject)
-        buttons.accepted.connect(dialog.accept)
-        layout.addWidget(buttons)
-        dialog.exec()
+        self.about_window = Aboutwindow()
+        self.about_window.show()
 
 
 def main() -> None:
