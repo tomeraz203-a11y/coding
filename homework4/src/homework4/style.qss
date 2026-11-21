@@ -16,7 +16,6 @@ QDialog {
 #pageSubtitle {
     color: #718096;
     font-size: 14px;
-    margin-top: -14px;
 }
 
 #controlsCard,

@@ -134,7 +134,20 @@ class GradeCorrectionWindow(QMainWindow):
         self.load_grades(file_path)
 
     def load_grades(self, file_path: str) -> None:
-        pass
+        self.selected_file = file_path
+        self.student_ids = []
+        self.original_grades = []
+        self.corrected_grades = []
+
+        with open(self.selected_file, "r") as f:
+            next(f)
+            for line in f:
+                student_id, grade = line.strip().split(",")
+                self.student_ids.append(student_id)
+                self.original_grades.append(int(grade))
+                self.corrected_grades.append(int(grade))
+
+        self.update_table()
 
     def apply_bonus(self) -> None:
         pass
