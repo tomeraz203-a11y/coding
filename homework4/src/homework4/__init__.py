@@ -150,7 +150,14 @@ class GradeCorrectionWindow(QMainWindow):
         self.update_table()
 
     def apply_bonus(self) -> None:
-        pass
+        bonus = self.bonus_input.value()
+        self.corrected_grades = []
+
+        for grade in self.original_grades:
+            new_grade = min(100, grade + bonus)
+            self.corrected_grades.append(new_grade)
+
+        self.update_table()
 
     def update_file(self) -> None:
         pass
