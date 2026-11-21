@@ -160,7 +160,18 @@ class GradeCorrectionWindow(QMainWindow):
         self.update_table()
 
     def update_file(self) -> None:
-        pass
+        with open(self.selected_file, "w") as f:
+            f.write("ID,Grade\n")
+            for i in range(len(self.student_ids)):
+                f.write(f"{self.student_ids[i]},{self.corrected_grades[i]}\n")
+
+        import os, sys, subprocess
+        if sys.platform == "win32":
+            os.startfile(self.selected_file)
+        elif sys.platform == "darwin":
+            subprocess.call(["open", self.selected_file])
+        else:
+            subprocess.call(["xdg-open", self.selected_file])
 
     def update_table(self) -> None:
         self.table.clearContents()
